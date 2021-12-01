@@ -109,10 +109,9 @@ public class SudokuSolver {
 
 	private int next_value_basic(int[][] board, Point curr) {
 		int nextValue = board[curr.row][curr.col] + 1;
-		if (nextValue > 8)
+		if (nextValue > 9)
 			return -1;
 		return nextValue;
-
 	}
 
 }
