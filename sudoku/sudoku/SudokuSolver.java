@@ -58,6 +58,7 @@ public class SudokuSolver {
 
 			next_val = get_next_value(board, curr);
 		}
+		board[curr.row][curr.col] = 0;
 		return null;
 	}
 
