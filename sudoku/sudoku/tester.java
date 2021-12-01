@@ -6,8 +6,8 @@ public class tester {
         try {
             int[][] board = SudokuUtil
                     .readInBoard("/Users/alexpena/Personal/Vanderbilt/Fall2021/AI/EA9-CSP/sudoku/easy.sud", 9);
-            test.solve(board);
-            System.out.println(tt);
+            int[][] result = test.solve(board);
+            System.out.println(SudokuUtil.formatBoard(result));
         } catch (Exception e) {
             System.out.println(e);
         }
