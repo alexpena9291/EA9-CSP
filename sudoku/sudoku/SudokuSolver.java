@@ -119,7 +119,6 @@ public class SudokuSolver {
 		if (nextValue > 9)
 			return -1;
 		return nextValue;
-
 	}
 
 }
