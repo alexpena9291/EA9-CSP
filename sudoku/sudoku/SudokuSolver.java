@@ -47,9 +47,15 @@ public class SudokuSolver {
 			return board;
 
 		int next_val = get_next_value(board, curr);
+
 		while (next_val != -1) {
 			board[curr.row][curr.col] = next_val;
-			recursive_solve(board, get_next_variable(board));
+			if (is_valid_placement(board, curr)) {
+				int[][] result = recursive_solve(board, get_next_variable(board));
+				if (result != null)
+					return result;
+			}
+
 			next_val = get_next_value(board, curr);
 		}
 		return null;
