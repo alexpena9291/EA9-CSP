@@ -14,9 +14,10 @@ public class Course {
 	private ArrayList<Student> students;
 
 	/**
-	 * The class prefixes. So stuff like "CPSC". This is so the generator creates courses with nice names like "CPSC 322" and so forth.
+	 * The class prefixes. So stuff like "CPSC". This is so the generator creates
+	 * courses with nice names like "CPSC 322" and so forth.
 	 */
-	public static final String[] classPrefixes = {"CPSC","MATH","PHIL","EECE","CHEM","ECON","PHYS","COGS"};
+	public static final String[] classPrefixes = { "CPSC", "MATH", "PHIL", "EECE", "CHEM", "ECON", "PHYS", "COGS" };
 
 	/**
 	 * Returns the name of the course, e.g. "CPSC 322"

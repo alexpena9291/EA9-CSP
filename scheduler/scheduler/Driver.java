@@ -11,7 +11,8 @@ public class Driver {
 	/**
 	 * The main function that grinds though a batch of nine problems.
 	 * 
-	 * Java doesn't really have a good way of timing other than the system timer, so other CPU load will be a factor. Don't encode a DVD while you're
+	 * Java doesn't really have a good way of timing other than the system timer, so
+	 * other CPU load will be a factor. Don't encode a DVD while you're
 	 * running this.
 	 * 
 	 * @param args
@@ -23,7 +24,8 @@ public class Driver {
 		/* We first need to set up our problem generators */
 
 		/*
-		 * This means 40 courses, 2 rooms, 500 students, and a 'crispness' of 0.95, which means that most of the time students take very similar
+		 * This means 40 courses, 2 rooms, 500 students, and a 'crispness' of 0.95,
+		 * which means that most of the time students take very similar
 		 * courses.
 		 */
 		Generator easyProblems = new Generator(40, 2, 500, 0.95);
@@ -32,7 +34,8 @@ public class Driver {
 		}
 
 		/*
-		 * This means 60 courses, 4 rooms, 600 students, and a 'crispness' of 0.9, which means that most of the time students take similar courses.
+		 * This means 60 courses, 4 rooms, 600 students, and a 'crispness' of 0.9, which
+		 * means that most of the time students take similar courses.
 		 */
 		Generator mediumProblems = new Generator(60, 4, 600, 0.9);
 		for (int i = 3; i < 6; i++) {
@@ -49,12 +52,13 @@ public class Driver {
 			System.out.println("PROBLEM " + i + ", ALGORITHM1: " + delta + " seconds");
 			System.out.println("CONSTRAINTS: " + e.violatedConstraints(arrayOfProblems[i], sc));
 
-			Scheduler myScheduler2 = new Scheduler2();
-			time = System.currentTimeMillis();
-			sc = myScheduler2.schedule(arrayOfProblems[i]);
-			delta = (System.currentTimeMillis() - time) / 1000;
-			System.out.println("PROBLEM " + i + ", ALGORITHM 2: " + delta + " seconds");
-			System.out.println("CONSTRAINTS: " + e.violatedConstraints(arrayOfProblems[i], sc));
+			// Scheduler myScheduler2 = new Scheduler2();
+			// time = System.currentTimeMillis();
+			// sc = myScheduler2.schedule(arrayOfProblems[i]);
+			// delta = (System.currentTimeMillis() - time) / 1000;
+			// System.out.println("PROBLEM " + i + ", ALGORITHM 2: " + delta + " seconds");
+			// System.out.println("CONSTRAINTS: " +
+			// e.violatedConstraints(arrayOfProblems[i], sc));
 		}
 	}
 
